@@ -1,0 +1,12 @@
+alias dtf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias _="sudo"
+alias ls='ls --color=auto'
+alias l="ls -lh"
+alias -s {epub,pdf,djvu}="zathura"
+alias mpv="prime-run mpv"
+alias cp="nocorrect cp"
+alias mv="nocorrect mv"
+alias steam="LANG=ru_RU.UTF-8 steam"
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'

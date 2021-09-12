@@ -1,0 +1,60 @@
+# Ignore everything by default.
+/**
+
+# config
+!.config/
+!.config/user-dirs.dirs
+!.config/user-dirs.locale
+!.config/alacritty/
+!.config/alacritty/*
+!.config/awesome/
+!.config/awesome/**/*
+!.config/fontconfig/
+!.config/fontconfig/**/*
+!.config/mpv/
+!.config/mpv/**/*
+.config/mpv/watch_later/
+!.config/mpd/
+!.config/mpd/mpd.conf
+!.config/nvim/
+!.config/nvim/*
+!.config/picom/
+!.config/picom/*
+!.config/pulse/
+!.config/pulse/default.pa
+!.config/redshift/
+!.config/redshift/**/*
+!.config/systemd/
+!.config/systemd/**/*
+.config/systemd/user/default.target.wants/
+
+# Git
+!.gitconfig
+!.gitignore
+
+# GTK
+!.gtkrc-2.0
+!.config/gtk-3.0/
+!.config/gtk-3.0/settings.ini
+
+# Tmux
+!.tmux.conf
+
+# Vim
+!.vim/
+!.vim/**/*
+!.vimrc
+.vim/.netrwhist
+.vim/plugged
+.vim/swap
+
+# xinit
+!.xinitrc
+!.Xresources
+
+# Zsh
+!.zshrc.local
+!.zshenv
+!.zprofile
+!.aliases
+!.dir_colors

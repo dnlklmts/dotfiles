@@ -1,0 +1,8 @@
+[Unit]
+Description=Compositor for Xorg
+
+[Service]
+ExecStart=/usr/bin/picom -b
+
+[Install]
+WantedBy=default.target
