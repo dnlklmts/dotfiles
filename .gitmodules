@@ -4,4 +4,4 @@
 [submodule ".config/awesome/net_widgets"]
 	path = .config/awesome/net_widgets
 	url = https://github.com/dnlklmts/net_widgets.git
-	branch = tweeking
+	branch = main
