@@ -107,16 +107,24 @@ end
 mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- Create separator widget
-sprtr = wibox.widget.textbox()
-sprtr:set_text(" : ")
+spacer = wibox.widget.textbox()
+spacer:set_text(" : ")
 
 -- Create battery text widget
 batterywidget = wibox.widget.textbox()
 
 -- Wireless widget
-net_wireless = net_widgets.wireless({interface="wlp7s0"})
-net_wired = net_widgets.indicator({interface="enp8s0"})
-net_internet = net_widgets.internet({indent = 0, timeout = 5, showconnected = true})
+net_wireless = net_widgets.wireless({
+  interface="wlp7s0",
+  indent = 4,
+})
+net_wired = net_widgets.indicator({
+  interface="enp8s0",
+})
+net_internet = net_widgets.internet({
+  timeout = 5,
+  showconnected = true,
+})
 
 -- Battery widget
 batterywidget_timer = timer({timeout = 1})
@@ -240,17 +248,18 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            sprtr,
-            net_wireless,
-            sprtr,
-            wibox.layout.margin(net_wired, 3, 3, 3, 3),
-            wibox.layout.margin(net_internet, 3, 3, 3, 3),
-            sprtr,
+            spacer,
+            wibox.container.margin(net_wireless, 0, 0, 4, 2),
+            spacer,
+            wibox.container.margin(net_wired, 0, 0, 4, 2),
+            spacer,
+            wibox.container.margin(net_internet, 0, 0, 4, 2),
+            spacer,
             mykeyboardlayout,
-            sprtr,
-            wibox.layout.margin(batterywidget, 3, 3, 3, 3),
-            sprtr,
-            wibox.layout.margin(wibox.widget.systray(), 3, 3, 3, 3),
+            spacer,
+            wibox.container.margin(batterywidget, 0, 0, 4, 2),
+            spacer,
+            wibox.container.margin(wibox.widget.systray(), 4, 2, 4, 2),
             mytextclock,
             s.mylayoutbox,
 
