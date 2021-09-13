@@ -4,6 +4,8 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim' 
 call plug#end()
 
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 let mapleader = "\<Space>"
 :imap jk <Esc>
 
