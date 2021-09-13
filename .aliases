@@ -2,7 +2,7 @@ alias dtf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias _="sudo"
 alias ls='ls --color=auto'
 alias l="ls -lh"
-alias -s {epub,pdf,djvu}="zathura"
+alias -s {epub,pdf,djvu}="xreader"
 alias mpv="prime-run mpv"
 alias cp="nocorrect cp"
 alias mv="nocorrect mv"
