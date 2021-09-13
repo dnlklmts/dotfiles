@@ -119,7 +119,16 @@ net_wireless = net_widgets.wireless({
   indent = 4,
 })
 net_wired = net_widgets.indicator({
-  interface="enp8s0",
+  interfaces = {"enp8s0"},
+  skiproutes = false,
+  timeout = 5
+})
+net_vpn = net_widgets.indicator({
+  interfaces = {"tun0"},
+  skipvpncheck = false,
+  skiproutes = false,
+  skipcmdline = false,
+  timeout = 5
 })
 net_internet = net_widgets.internet({
   timeout = 5,
@@ -252,6 +261,8 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.container.margin(net_wireless, 0, 0, 4, 2),
             spacer,
             wibox.container.margin(net_wired, 0, 0, 4, 2),
+            spacer,
+            wibox.container.margin(net_vpn, 0, 0, 4, 2),
             spacer,
             wibox.container.margin(net_internet, 0, 0, 4, 2),
             spacer,
