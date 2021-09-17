@@ -3,7 +3,7 @@ Description=Compositor for Xorg
 
 [Service]
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/picom -b
+ExecStart=/usr/bin/xcompmgr -Cc -r2 -t-1 -l-1 &
 
 [Install]
 WantedBy=default.target
