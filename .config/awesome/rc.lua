@@ -44,6 +44,8 @@ end
 -- Notification icon sizing
 naughty.config.defaults['icon_size'] = 50
 naughty.config.defaults['bg'] = "#212426"
+naughty.config.defaults['max_height'] = 640
+naughty.config.defaults['max_width'] = 360
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
@@ -694,4 +696,9 @@ client.connect_signal("unfocus", function(c)
   c.opacity = 1
 end)
 
+awful.spawn.with_shell(
+       'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
+       'xrdb -merge <<< "awesome.started:true";' ..
+       'picom -b;'
+       )
 -- }}}
