@@ -1,8 +1,9 @@
 export XCURSOR_PATH=/usr/share/icons
 
 export LESS='-R --use-color -Dd+r$Du+b'
-export MANPAGER="less -R --use-color -Dd+r -Du+b"
+# export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
+export MANPAGER="bat"
 
 export VDPAU_DRIVER=nvidia
 export QT_QPA_PLATFORMTHEME=gtk2
