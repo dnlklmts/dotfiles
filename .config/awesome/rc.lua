@@ -209,9 +209,11 @@ screen.connect_signal("property::geometry", set_wallpaper)
 -- Add tags to each screen
 local tags = sharedtags({
     { name = "🌐", screen = 1, layout = awful.layout.suit.max },
-    { name = "code", screen = 1, layout = awful.layout.suit.tile.left },
     { name = "IM", screen = 1, layout = lain.layout.termfair.center },
-    { name = "etc", screen = 1, layout = awful.layout.suit.floating }
+    { name = "MPV", screen = 1, layout = awful.layout.suit.floating },
+    { name = "DEV", screen = 1, layout = awful.layout.suit.tile.left },
+    { name = "QA", screen = 1, layout = awful.layout.suit.tile.left },
+    { name = "DB", screen = 1, layout = awful.layout.suit.tile.left }
 })
 
 awful.screen.connect_for_each_screen(function(s)
@@ -600,19 +602,17 @@ awful.rules.rules = {
     { rule = { instance = "google-chrome" },
       properties = { tag = tags[1] } },
     { rule = { instance = "xreader" },
-      properties = { tag = tags[2]} },
+      properties = { tag = tags["DEV"]} },
     { rule = { class = "mpv" },
-      properties = { tag = tags[4] },
+      properties = { tag = tags["etc"] },
       callback = function (p)
         awful.placement.centered(p,nil)
       end
     },
     { rule = { class = "keepassxc" },
       properties = { floating = true } },
-    { rule = { instance = "gimp" },
-      properties = { tag = tags[2] } },
     { rule = { instance = "telegram-desktop" },
-      properties = { tag = tags[3] } },
+      properties = { tag = tags["IM"] } },
     { rule = { class = "Gajim", role = "roster" },
       properties = { tag = tags["IM"] },
     },
