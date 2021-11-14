@@ -604,7 +604,7 @@ awful.rules.rules = {
     { rule = { instance = "xreader" },
       properties = { tag = tags["DEV"]} },
     { rule = { class = "mpv" },
-      properties = { tag = tags["etc"] },
+      properties = { tag = tags["MPV"] },
       callback = function (p)
         awful.placement.centered(p,nil)
       end
